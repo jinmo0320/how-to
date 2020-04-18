@@ -1,0 +1,110 @@
+html {
+  animation: start 1s;
+}
+@keyframes start {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: linear-gradient(to right, #0c7b93, #27496d);
+  animation: body 1s;
+}
+@keyframes body {
+  from {
+    background-color: white;
+  }
+  to {
+    background-image: linear-gradient(to right, #0c7b93, #27496d);
+  }
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 70px auto auto;
+}
+.ba {
+  background-image: linear-gradient(to right, #393e46, #222831);
+  grid-column: 1/-1;
+}
+.main {
+  margin: 5em 0 7em 0;
+  padding-top: 2em;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 20px;
+  width: 70%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+}
+.chart {
+  border: 1px solid black;
+}
+p {
+  margin: 2em;
+}
+.footer {
+  justify-self: center;
+  width: 70%;
+  border-top: white solid 2px;
+  text-align: end;
+  color: white;
+  padding: 2em;
+  grid-column: 1/-1;
+}
+.up {
+  width: 800px;
+  height: 70px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-self: center;
+}
+.upitem {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0.5em;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+.content {
+  display: none;
+  width: 160px;
+  background-color: #f08a5d;
+  font-size: 15px;
+  line-height: 2em;
+  text-shadow: none;
+  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.upitem:hover {
+  text-shadow: 0px 0px 10px white;
+}
+.upitem:hover .content {
+  display: block;
+}
